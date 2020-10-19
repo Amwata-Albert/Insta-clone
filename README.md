@@ -50,7 +50,7 @@ Give an example
 3. [Pip](https://pip.pypa.io/en/stable/installing/)
 
 #### Technologies used
-    - Python 3.6
+    - Python 3.8
     - HTML
     - Bootstrap 4
     - Heroku
@@ -98,15 +98,15 @@ Install dependancies that will create an environment for the app to run
 
 #### Make and run migrations
 ```bash
-python3.6 manage.py check
+python3.8 manage.py check
 python manage.py makemigrations news
-python3.6 manage.py sqlmigrate news 0001
-python3.6 manage.py migrate
+python3.8 manage.py sqlmigrate news 0001
+python3.8 manage.py migrate
 ```
 
 #### Run the app
 ```bash
-python3.6 manage.py runserver
+python3.8 manage.py runserver
 ```
 Open [localhost:8000](http://127.0.0.1:8000/)
 
@@ -117,14 +117,14 @@ Please read this [comprehensive guide](https://opensource.guide/how-to-contribut
 ## Bugs
 #### Known bugs
  - N/A
- -If any are experiences kindly [contact me](https://kenmucciz8@gmail.com)
+ -If any are experiences kindly [contact me](albertotieno41@gmail.com)
 
 
 
 ## Support and contact details
-Contact [Kenneth Muchiri](https://kenmucciz8@gmail.com) for further help/support
+Contact [Kenneth Muchiri](albertotieno41@gmail.com) for further help/support
 
 ### License
 [MIT LICENSE]()
 
-Copyright (c)2019 **Kenneth Muchiri**
+Copyright (c)2019 **Amwata Albert**
