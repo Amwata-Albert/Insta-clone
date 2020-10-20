@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -56,7 +57,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'insta.urls'
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'insta.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-# dev
+# developement
 if config('MODE')=="dev":
        DATABASES = {
        'default': {
@@ -177,3 +177,31 @@ LOGIN_URL = 'login'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+
+'''
+#include <stdio.h>
+int main() {
+    int n, i;
+    float num[100], sum = 0.0, avg;
+
+    printf("Enter the numbers of elements: ");
+    scanf("%d", &n);
+
+    while (n > 100 || n < 1) {
+        printf("Error! number should in range of (1 to 100).\n");
+        printf("Enter the number again: ");
+        scanf("%d", &n);
+    }
+
+    for (i = 0; i < n; ++i) {
+        printf("%d. Enter number: ", i + 1);
+        scanf("%f", &num[i]);
+        sum += num[i];
+    }
+
+    avg = sum / n;
+    printf("Average = %.2f", avg);
+    return 0;
+}
+'''
