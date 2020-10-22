@@ -11,6 +11,7 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+import cloudinary
 
 
 
@@ -37,6 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cloudinary',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -177,3 +179,9 @@ LOGIN_URL = 'login'
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+cloudinary.config( 
+  cloud_name = "dpbnkmqav", 
+  api_key = "458414412259715", 
+  api_secret = "5PMJ6nrmV3NF3HmP5Jg-Gihq4_Q" 
+)
